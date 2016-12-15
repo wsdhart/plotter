@@ -39,7 +39,7 @@ function setValues(min,max,mean,sd,median,q1,q3,n)
     document.getElementById("range").innerHTML = max - min || "";
     document.getElementById("sd").innerHTML = sd;
     document.getElementById("median").innerHTML = median;
-    document.getElementById("q1").innerHTML = q1;
+    document.getElementById("q1").innerHTML = q1 || "";
     document.getElementById("q3").innerHTML = q3;
     document.getElementById("iqr").innerHTML = q3 - q1 || "";
     document.getElementById("n").innerHTML = n;
