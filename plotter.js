@@ -2,7 +2,7 @@
 
 "use strict";
 
-window.onload = function init(){}
+window.onload = function init(){ updatePlot(); }
 
 function update()
 {
@@ -27,6 +27,8 @@ function update()
     var q3 = returned[1];
 
     setValues(min,max,mean,sd0,median0,q1,q3,n);
+
+    updatePlot(values,min,max);
 }
 
 function setValues(min,max,mean,sd,median,q1,q3,n)
@@ -158,5 +160,7 @@ function clear_table()
 	table.deleteRow(0);
 
     setValues("","","","","","","","");
+
+    updatePlot();
 }
 
